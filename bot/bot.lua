@@ -95,11 +95,14 @@ function do_action(msg)
             local text = 'This plugin requires privileged user'
             send_msg(receiver, text, ok_cb, false)
           else 
-            result = desc.run(msg, matches)
+            result, markread = desc.run(msg, matches)
             -- print("  sending", result)
             if (result) then
               result = do_lex(msg, result)
               _send_msg(receiver, result)
+            end
+            if (markread) then
+              mark_read(get_receiver(msg), ok_cb, false)
             end
           end
         end
@@ -225,3 +228,4 @@ end
 our_id = 0
 now = os.time()
 math.randomseed(now)
+
