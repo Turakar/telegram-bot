@@ -22,7 +22,9 @@ function run(msg, matches)
    local cur = 'EUR'
    local amt = nil
    -- Get the global match out of the way
-   if matches[1] == "!btc" then  return getBTCX(amt,cur) end
+   if matches[1] == "!btc" then  
+     return getBTCX(amt,cur), true
+  end
 
    if matches[2]~=nil then
       -- There is a second match
@@ -32,7 +34,7 @@ function run(msg, matches)
       -- Just a EUR or USD param
       cur = string.upper(matches[1])
    end
-   return getBTCX(amt,cur)
+   return getBTCX(amt,cur), true
 end
 
 return {

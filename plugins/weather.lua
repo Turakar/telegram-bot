@@ -27,7 +27,7 @@ function run(msg, matches)
     else
         city = "Madrid,ES"
     end
-    return get_weather(city)
+    return get_weather(city), true
 end
 
 return {

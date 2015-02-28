@@ -2,9 +2,9 @@
 function run(msg, matches)
   local date = os.date("*t")
   if date.hour == date.min then
-    return "klopf klopf"
+    return "klopf klopf", true
   else
-    return "Zu spät!"
+    return "Zu spät!", true
   end
 end
 

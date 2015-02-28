@@ -47,7 +47,7 @@ function run(msg, matches)
    send_photo_from_url(receiver, url)
 
    -- Return a link to the google maps stuff is now not needed anymore
-   return nil
+   return nil, true
 end
 
 return {

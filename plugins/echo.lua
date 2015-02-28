@@ -1,6 +1,6 @@
 
 function run(msg, matches)
-  return matches[1]
+  return matches[1], true
 end
 
 return {

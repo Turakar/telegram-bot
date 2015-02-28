@@ -54,17 +54,17 @@ function run(msg, matches)
 	if (matches[1] == "ing") then
 		if (matches [2] == "reset") then
 			clear_votes (tostring(msg.to.id))
-			return "Voting statistics reset.."
+			return "Voting statistics reset..", true
 		elseif (matches [2] == "stats") then
 			local votes_result = votes_result (tostring(msg.to.id))
 			if (votes_result == "") then
 				votes_result = "[No votes registered]\n"
 			end
-			return "Voting statistics :\n" .. votes_result
+			return "Voting statistics :\n" .. votes_result, true
 		end
 	else
 		save_vote(tostring(msg.to.id), msg.from.print_name, tostring(tonumber(matches[2])))
-		return "Vote registered : " .. msg.from.print_name .. " " .. tostring(tonumber(matches [2]))
+		return "Vote registered : " .. msg.from.print_name .. " " .. tostring(tonumber(matches [2])), true
 	end
 end
 

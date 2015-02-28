@@ -91,7 +91,7 @@ end
 
 local function run(msg, matches)
   if matches[1] == "stats" then -- Hack
-        return get_stats_status(msg)
+        return get_stats_status(msg), true
   else 
     print ("update stats")
     update_user_stats(msg)

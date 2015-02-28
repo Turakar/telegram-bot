@@ -89,7 +89,7 @@ function getformattedLocalTime(area)
 end
 
 function run(msg, matches)
-   return getformattedLocalTime(matches[1])
+   return getformattedLocalTime(matches[1]), true
 end
 
 return {

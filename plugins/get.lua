@@ -52,9 +52,9 @@ end
 function run(msg, matches)
   local chat_id = tostring(msg.to.id)
   if matches[1] == "!get" then
-    return get_value(chat_id, nil)
+    return get_value(chat_id, nil), true
   end  
-   return get_value(chat_id, matches[1])
+   return get_value(chat_id, matches[1]), true
 end
 
 function lex(msg, text)

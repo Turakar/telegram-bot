@@ -16,9 +16,9 @@ end
 
 function run(msg, matches)
   if matches[1] == "!eur" then
-    return getEURUSD(nil)
+    return getEURUSD(nil), true
   end
-  return getEURUSD(matches[1])
+  return getEURUSD(matches[1]), true
 end
 
 return {

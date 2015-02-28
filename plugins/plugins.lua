@@ -81,21 +81,21 @@ end
 function run(msg, matches)
 	-- Show the available plugins 
 	if matches[1] == '!plugins' then
-		return list_plugins()
+		return list_plugins(), true
 	end
 	-- Enable a plugin
 	if matches[1] == 'enable' then
 		print("enable: "..matches[2])
-		return enable_plugin(matches[2])
+		return enable_plugin(matches[2]), true
 	end
 	-- Disable a plugin
 	if matches[1] == 'disable' then
 		print("disable: "..matches[2])
-		return disable_plugin(matches[2])
+		return disable_plugin(matches[2]), true
 	end
 	-- Reload all the plugins!
 	if matches[1] == 'reload' then
-		return reload_plugins(true)
+		return reload_plugins(true), true
 	end
 end
 

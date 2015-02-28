@@ -13,7 +13,7 @@ function getGoogleImage(text)
 
   -- Google response Ok
   local i = math.random(#google.responseData.results) -- Random image from results
-  return google.responseData.results[i].url
+  return google.responseData.results[i].url, true
 
 end
 
