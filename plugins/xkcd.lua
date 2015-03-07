@@ -39,7 +39,7 @@ function run(msg, matches)
   end
   file_path = download_to_file(url)
   send_photo(receiver, file_path, send_title, {receiver, title})
-  return false
+  return false, true
 end
 
 return {

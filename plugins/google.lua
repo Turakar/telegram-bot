@@ -24,7 +24,7 @@ end
 function run(msg, matches)
    vardump(matches)
    local results = googlethat(matches[1])
-   return stringlinks(results)
+   return stringlinks(results), true
 end
 
 return {

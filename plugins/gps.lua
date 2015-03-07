@@ -13,7 +13,7 @@ function run(msg, matches)
 
   send_photos_from_url(receiver, urls)
 
-  return "www.google.es/maps/place/@" .. lat .. "," .. lon
+  return "www.google.es/maps/place/@" .. lat .. "," .. lon, true
 end
 
 return {

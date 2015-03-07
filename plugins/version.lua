@@ -2,7 +2,7 @@
 function run(msg, matches)
   return 'Telegram Bot '.. VERSION .. [[ 
   Checkout http://git.io/6jdjGg
-  GNU v2 license.]]
+  GNU v2 license.]], true
 end
 
 return {

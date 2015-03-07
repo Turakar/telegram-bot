@@ -54,9 +54,9 @@ end
 
 function run(msg, matches)
   if matches[1] == "!help md" then
-    return html_help()
+    return html_help(), true
   else
-    return telegram_help()
+    return telegram_help(), true
   end
 end
 
